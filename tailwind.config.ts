@@ -8,6 +8,23 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        "border-spin": {
+          "100%": {
+            transform: "rotate(-360deg)",
+          },
+        },
+      },
+      animation: {
+        "border-spin": "border-spin 8s linear infinite",
+      },
+      colors: {
+        bone: "#f8f4dd",
+        "ui-yellow": "#f2bd4c",
+        "ui-base-200": "#1f1c1d",
+        "ui-base-300": "#0f0d0e",
+        "ui-green": "#0ba95b",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
