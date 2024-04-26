@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 
 function createTodo(label: string): Todo {
@@ -30,14 +31,19 @@ export default function TodoComposer({
   };
 
   return (
-    <li>
+    <li className="flex justify-between w-full bg-[#221f20] my-3 mt-3 p-2 rounded-lg">
       <input
         placeholder="Add a new todo"
         type="text"
+        className="text-bone bg-ui-base-200 mr-10"
         value={label}
         onChange={handleUpdateLabel}
       />
-      <button disabled={label.length === 0} onClick={handleAddTodoClick}>
+      <button
+        className="underline text-ui-yellow"
+        disabled={label.length === 0}
+        onClick={handleAddTodoClick}
+      >
         Add Todo
       </button>
     </li>

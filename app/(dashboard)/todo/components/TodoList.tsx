@@ -33,7 +33,7 @@ export default function TodoList() {
   };
 
   return (
-    <ul>
+    <ul className="w-full">
       <TodoComposer handleAddTodo={handleAddTodo} />
       {todos.map((todo) => (
         <Todo

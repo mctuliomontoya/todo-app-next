@@ -20,4 +20,47 @@
     .text-balance {
         text-wrap: balance;
     }
+    .box {
+        background:
+            linear-gradient(#0f0d0e, #0f0d0e) padding-box,
+            linear-gradient(var(--angle), #1f1c1d, #c084fc66) border-box;
+        animation: 8s rotate linear infinite;
+    }
+
+    .checkbox-wrapper input[type="checkbox"] {
+        /* removing default appearance */
+        appearance: none;
+        /* creating a custom design */
+        width: 1.6em;
+        height: 1.6em;
+        border-radius: 0.9em;
+        margin-right: 0.5em;
+        cursor: pointer;
+    }
+
+    input.completed::before {
+        content: "⅃";
+        border-top: none;
+        border-right: none;
+        height: 6px;
+        left: 13px;
+        position: absolute;
+        font-size: 16px;
+        color: #f8f4dd;
+        top: 3px;
+        transform: rotate(45deg);
+        width: 12px;
+    }
+
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
 }
