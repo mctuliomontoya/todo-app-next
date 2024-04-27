@@ -40,7 +40,7 @@ export default function Todo({
   const tempHtml = todo.id.toString();
 
   return (
-    <li className="  justify-between flex flex-row w-full bg-[#221f20] my-3 mt-3 p-2 rounded-lg">
+    <li className="  justify-between flex flex-row w-full bg-[#221f20] my-3 mt-3 p-4 rounded-lg">
       <label className="flex flex-row" htmlFor={todo.id}>
         <div className="checkbox-wrapper relative h-[24px] ">
           <input
@@ -48,7 +48,7 @@ export default function Todo({
             className={
               todo.completed
                 ? "completed bg-ui-green relative border-1 border-ui-green"
-                : "ring-bone ring-1 ring-inset  bg-[#383533] "
+                : "ring-bone ring-1 ring-inset  bg-[#383533]"
             }
             id={todo.id}
             checked={todo.completed}
@@ -67,7 +67,7 @@ export default function Todo({
           <span
             className={
               todo.completed === true
-                ? " px-3 line-through italic max-w-md whitespace-normal text-bone"
+                ? " px-3 line-through italic max-w-md whitespace-normal text-ui-disabled"
                 : "px-3 text-bone max-w-md whitespace-normal"
             }
           >

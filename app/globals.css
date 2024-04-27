@@ -30,6 +30,8 @@
     .checkbox-wrapper input[type="checkbox"] {
         /* removing default appearance */
         appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
         /* creating a custom design */
         width: 1.6em;
         height: 1.6em;
@@ -43,7 +45,7 @@
         border-top: none;
         border-right: none;
         height: 6px;
-        left: 13px;
+        left: 14px;
         position: absolute;
         font-size: 16px;
         color: #f8f4dd;

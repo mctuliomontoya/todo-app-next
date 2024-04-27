@@ -31,16 +31,16 @@ export default function TodoComposer({
   };
 
   return (
-    <li className="flex justify-between w-full bg-[#221f20] my-3 mt-3 p-2 rounded-lg">
+    <li className="flex justify-between bg-[#221f20] w-full my-3 mt-3 p-4 rounded-lg ">
       <input
         placeholder="Add a new todo"
         type="text"
-        className="text-bone bg-ui-base-200 mr-10"
+        className="bg-ui-base-200 basis-10/12 mr-10 outline-none text-bone placeholder:text-[#757575] placeholder:italic italic"
         value={label}
         onChange={handleUpdateLabel}
       />
       <button
-        className="underline text-ui-yellow"
+        className="underline basis-2/12 text-ui-yellow"
         disabled={label.length === 0}
         onClick={handleAddTodoClick}
       >
