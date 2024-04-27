@@ -20,6 +20,9 @@ const config: Config = {
       },
       colors: {
         bone: "#f8f4dd",
+        "brand-purple": "#7b5ea7",
+        "ui-grey-300": "#76787f",
+        "ui-disabled": "#58544f",
         "ui-yellow": "#f2bd4c",
         "ui-base-200": "#1f1c1d",
         "ui-base-300": "#0f0d0e",
