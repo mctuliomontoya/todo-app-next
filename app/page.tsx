@@ -12,18 +12,18 @@ export default function Home() {
 
   return (
     <main className="bg-ui-base-300 h-screen flex w-full items-center justify-center">
-      <section className="bg-ui-base-300 w-full">
+      <section className="back w-full">
         <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div className="w-full bg-ui-base-300 md:mt-0 sm:max-w-md xl:p-0">
             <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
               <div className="w-full flex flex-col items-center justify-center">
                 <a
                   href="#"
-                  className="flex items-center text-3xl font-extrabold text-bone"
+                  className="flex items-center text-4xl font-extrabold text-bone"
                 >
-                  Flowbite
+                  the todo app.
                 </a>
-                <h1 className="text-2xl mt- font-extrabold text-bone md:text-2xl">
+                <h1 className="text-2xl mt- font-extrabold text-bone md:text-xl">
                   Sign in to your account
                 </h1>
               </div>
@@ -48,7 +48,7 @@ export default function Home() {
                     />
                     <button
                       type="button"
-                      className="bg-[#383533]  px-1  rounded-xl"
+                      className="bg-[#383533] size-[25px] flex items-center justify-center rounded-xl"
                       onClick={handleToggleVisibility}
                     >
                       {isInputValueVisible ? "🙊" : "🙈"}
