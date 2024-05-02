@@ -95,6 +95,25 @@
         width: 12px;
     }
 
+    .background-test {
+        background-color: #0f0d0e;
+        background-image: repeating-linear-gradient(
+                to right,
+                #1f1c1d,
+                #1f1c1d 1px,
+                transparent 1px,
+                transparent 30px
+            ),
+            repeating-linear-gradient(
+                to bottom,
+                #1f1c1d,
+                #1f1c1d 1px,
+                transparent 1px,
+                transparent 30px
+            );
+        border: #1f1c1d solid #1f1c1d;
+    }
+
     @keyframes rotate {
         to {
             --angle: 360deg;
