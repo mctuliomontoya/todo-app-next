@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 
 type TodoType = {
@@ -37,11 +36,9 @@ export default function Todo({
 
   const handleDeleteClick = () => handleDeleteTodo(todo.id);
 
-  const tempHtml = todo.id.toString();
-
   return (
-    <li className="  justify-between flex flex-row w-full bg-[#221f20] my-3 mt-3 p-4 rounded-lg">
-      <label className="flex flex-row" htmlFor={todo.id}>
+    <li className="justify-between flex flex-row w-full bg-[#221f20]  my-3 p-4 rounded-lg  last:mb-0 first:mt-0">
+      <label className="flex flex-row w-full" htmlFor={todo.id}>
         <div className="checkbox-wrapper relative h-[24px] ">
           <input
             type="checkbox"
@@ -59,7 +56,7 @@ export default function Todo({
         {editing === true ? (
           <input
             type="text"
-            className=" px-3 text-bone outline-none bg-ui-base-200"
+            className=" px-3 text-bone outline-none w-10/12 bg-ui-base-200"
             value={todo.label}
             onChange={handleEditTodo}
           />
@@ -67,7 +64,7 @@ export default function Todo({
           <span
             className={
               todo.completed === true
-                ? " px-3 line-through italic max-w-md whitespace-normal text-ui-disabled"
+                ? " px-3 line-through italic max-w-md whitespace-normal basis-10/12 text-ui-disabled"
                 : "px-3 text-bone max-w-md whitespace-normal"
             }
           >
@@ -75,7 +72,7 @@ export default function Todo({
           </span>
         )}
       </label>
-      <div className="content-center min-w-fit ">
+      <div className="content-center min-w-fit  basis-2/12 ">
         <button
           className={"text-ui-yellow px-2 underline"}
           onClick={handleEditClick}
