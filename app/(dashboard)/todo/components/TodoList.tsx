@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 import Todo from "./Todo";
 import TodoComposer from "./TodoComposer";
@@ -33,16 +32,28 @@ export default function TodoList() {
   };
 
   return (
-    <ul className="w-full">
-      <TodoComposer handleAddTodo={handleAddTodo} />
-      {todos.map((todo) => (
-        <Todo
-          key={todo.id}
-          todo={todo}
-          handleUpdateTodo={handleUpdateTodo}
-          handleDeleteTodo={handleDeleteTodo}
-        />
-      ))}
-    </ul>
+    <div className="w-full">
+      <ul>
+        <div className="sticky top-0">
+          <TodoComposer handleAddTodo={handleAddTodo} />
+        </div>
+        <div className="max-h-80 mt-3 overflow-y-auto ">
+          {todos[0] ? (
+            todos.map((todo) => (
+              <Todo
+                key={todo.id}
+                todo={todo}
+                handleUpdateTodo={handleUpdateTodo}
+                handleDeleteTodo={handleDeleteTodo}
+              />
+            ))
+          ) : (
+            <div className="w-full flex justify-center">
+              <p className="text-bone italic opacity-75">No remaining tasks!</p>
+            </div>
+          )}
+        </div>
+      </ul>
+    </div>
   );
 }
