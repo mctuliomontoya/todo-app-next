@@ -2,6 +2,8 @@
 import React from "react";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const [isInputValueVisible, setIsInputValueVisible] = React.useState(false);
@@ -9,6 +11,8 @@ export default function Home() {
   const handleToggleVisibility = () => {
     setIsInputValueVisible(!isInputValueVisible);
   };
+
+  const router = useRouter();
 
   return (
     <main className="bg-ui-base-300 h-screen flex w-full items-center justify-center">
@@ -67,6 +71,7 @@ export default function Home() {
                 </div>
                 <button
                   type="submit"
+                  onClick={() => router.push("/todo")}
                   className="w-full text-bone bg-ui-base-200 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-brand-purple font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 >
                   Sign in
