@@ -1,4 +1,3 @@
-"use client";
 import * as React from "react";
 
 function createTodo(label: string): Todo {
@@ -31,7 +30,7 @@ export default function TodoComposer({
   };
 
   return (
-    <li className="flex justify-between bg-[#221f20] w-full my-3 mt-3 p-4 rounded-lg ">
+    <li className="flex justify-between bg-[#221f20] w-full p-4 scroll-p-4 rounded-lg ">
       <input
         placeholder="Add a new todo"
         type="text"
