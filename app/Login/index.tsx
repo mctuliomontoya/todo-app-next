@@ -69,7 +69,7 @@ export default function Login() {
                 </div>
                 <button
                   type="submit"
-                  onClick={() => router.push("/todo")}
+                  onClick={() => router.push("/TodoList")}
                   className="w-full text-bone bg-ui-base-200 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-brand-purple font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 >
                   Sign in
